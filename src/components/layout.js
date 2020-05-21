@@ -45,7 +45,7 @@ class Layout extends React.Component {
   render() {
     const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    const siteName = "Gwen's Cake Shop"
+    const siteName = "The Local Grocer"
     let header
 
     if (location.pathname === rootPath) {
@@ -68,8 +68,7 @@ class Layout extends React.Component {
             {header}
             <MainSection>{children}</MainSection>
             <FooterStyled>
-              <strong>Gatsby Snipcart Starter
-           - Made by <ExternalLink href="https://www.issydennis.com/" target="_blank" rel="noopener noreferrer">Issy Dennis</ExternalLink>
+              <strong>The Local Grocer
               </strong>
             </FooterStyled>
           </PageWrapper>

@@ -11,12 +11,12 @@ const HeaderMinorStyled = styled.div`
     align-items: center;
     background: ${props => props.theme.colors.main};
     margin: 20px 0;
-    border: 4px solid ${props => props.theme.colors.secondaryAccent};
+    ${'' /* border: 4px solid ${props => props.theme.colors.secondaryAccent}; */}
 
 `
 
 const ShopName = styled.h1`
-    padding: 20px;
+    padding: 0px;
     font-family: Heebo, sans-serif;
     font-size: 2em;
     font-weight: 700;
@@ -77,12 +77,12 @@ class HeaderMinor extends Component {
             <HeaderMinorStyled>
                 <ShopName>
                     <LinkStyled to='/'>
-                        {this.props.shopName}
+                    <img src={'/logo.jpg'} alt="Logo" width="360px" />
                     </LinkStyled>
                 </ShopName>
                 <CartSummary className="snipcart-summary">
                     <a href="#" className="snipcart-checkout"> <ShoppingCart size='40px' /></a>
-                    <p>{this.state.items} yummy items</p>
+                    <p>{this.state.items} { this.state.items > 1 ? 'boxes' : 'box'}</p>
                 </CartSummary>
 
             </HeaderMinorStyled>

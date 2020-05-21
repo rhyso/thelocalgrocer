@@ -46,13 +46,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Snipcart Starter`,
+        name: `The local grocer`,
         short_name: `Gatsby Snipcart`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `thistle`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/logo.jpg`,
       },
     },
     `gatsby-plugin-offline`,

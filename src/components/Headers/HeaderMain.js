@@ -11,14 +11,10 @@ const HeaderMainStyled = styled.div`
 `
 
 const ShopName = styled.h1`
-    background: ${props => props.theme.colors.main};
-    padding: 20px;
-    width: 50%;
+
     text-align: center;
     font-family: Heebo, sans-serif;
-    border: 4px solid ${props => props.theme.colors.secondaryAccent};
-    font-size: 2.5em;
-    font-weight: 900;
+
     @media (max-width: 600px) {
         width: 100%;
       }
@@ -35,7 +31,7 @@ const headerMain = (props) => {
         <HeaderMainStyled>
             <ShopName>
                 <LinkStyled to='/'>
-                    {props.shopName}
+                    <img src={'/logo.jpg'} alt="Logo" width="360px" />
                 </LinkStyled>
             </ShopName>
         </HeaderMainStyled>
