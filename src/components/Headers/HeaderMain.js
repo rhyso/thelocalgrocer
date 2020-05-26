@@ -21,10 +21,9 @@ const ShopName = styled.h1`
 `
 
 const Desc = styled.p`
-    width: 600px;
-    @media (min-width: 600px) {
+    max-width: 600px;
         margin-top:40px;
-      }
+   
 `
 
 const LinkStyled = styled(Link)`
