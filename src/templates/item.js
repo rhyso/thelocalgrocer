@@ -8,7 +8,7 @@ import styled from "styled-components"
 import Layout from "../components/layout";
 
 const Heading = styled.h1`
-  font-weight: 900;
+  font-weight: 600;
   font-size: 1.5em;
   margin: 20px 0;
 `
