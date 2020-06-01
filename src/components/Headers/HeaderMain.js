@@ -41,13 +41,11 @@ const headerMain = (props) => {
                 <LinkStyled to='/'>
                     <img src={'/logo.jpg'} alt="Logo" width="360px" />
                     <Desc>
-                    <p>Your Local Grocer. Supplying quality, fresh fruit and vegetables to your door. <br/> 
+                    <p>Your Local Grocer. Supplying quality, fresh fruit and vegetables to your door on a time scale that suits you. <br/> 
 
-                    Delivering bespoke fruit and veg boxes on a time scale that suits you! 
-                    <br/><br/>
-                    Travelling between Magor and Chepstow to deliver bespoke boxes and provide a roadside grocery service that saves the long queues and cuts down the wait times at supermarkets. <br/><br/> 
+                    <br/>
+                    Our current delivery area stretches between Langstone and Chepstow. <br/><br/> 
 
-                    Put the choice in your hands. Choose your own produce. Choose The Local Grocer. <br/><br/>
 
                     Any problems feel free to contact <b><a href="mailto:order@thelocalgrocer.co.uk">order@thelocalgrocer.co.uk</a></b></p>
                     </Desc>
