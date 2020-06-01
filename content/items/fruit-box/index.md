@@ -2,7 +2,7 @@
 title: Fruit Box
 date: 2019-06-19
 id: 5
-price: 15
+price: 0.20
 image: ./fruit-box.jpg
 description: A mix of high quality locally sourced fruit delivered to your door.
 customField: 
