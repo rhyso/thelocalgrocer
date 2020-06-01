@@ -8,6 +8,9 @@ description: A mix of high quality locally sourced vegetables delivered to your 
 customField: 
     name: Box Size
     values: [{name: 'Small', priceChange: 0}, {name: 'Medium', priceChange: 10}, {name: 'Large', priceChange: 20.00}]
+customField2: 
+    name: Delivery day
+    values: [{name: 'Wednesday'}, {name: 'Thursday'}, {name: 'Friday'}]    
 ---
 
 A mix of high quality locally sourced vegetables delivered to your door.

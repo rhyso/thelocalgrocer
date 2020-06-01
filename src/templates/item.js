@@ -54,13 +54,18 @@ const BuyButton = styled.button`
 
 class Item extends React.Component {
   state = {
-    selected: this.props.data.markdownRemark.frontmatter.customField.values[0].name
+    selected: this.props.data.markdownRemark.frontmatter.customField.values[0].name,
+    selectedDate: this.props.data.markdownRemark.frontmatter.customField2.values[0].name,
   }
 
   setSelected = (value) => {
     this.setState({ selected: value })
   }
 
+  setSelectedDate = (value) => {
+    this.setState({ selectedDate: value })
+  }
+  
   // create the string required by snipcart to allow price changes based on option chosen
   createString = (values) => {
     return values.map(option => {
@@ -88,11 +93,19 @@ class Item extends React.Component {
 
         <Price>£{this.updatePrice(item.frontmatter.price, item.frontmatter.customField.values)}</Price>
         <Description>{item.frontmatter.description}</Description>
+        Box Size:
         <Dropdown
           id={item.frontmatter.customField.name}
           onChange={(e) => this.setSelected(e.target.value)}
           value={this.state.selected}>
           {item.frontmatter.customField.values.map((option) => (<DropdownOption key={option.name}>{option.name}</DropdownOption>))}
+        </Dropdown>
+        Delivery Date:
+        <Dropdown
+          id={item.frontmatter.customField2.name}
+          onChange={(e) => this.setSelectedDate(e.target.value)}
+          value={this.state.selectedDate}>
+          {item.frontmatter.customField2.values.map((option) => (<DropdownOption key={option.name}>{option.name}</DropdownOption>))}
         </Dropdown>
 
         <BuyButton
@@ -105,7 +118,11 @@ class Item extends React.Component {
           data-item-url={"http://thelocalgrocer.co.uk" + item.fields.slug} //REPLACE WITH OWN URL
           data-item-custom1-name={item.frontmatter.customField ? item.frontmatter.customField.name : null}
           data-item-custom1-options={this.createString(item.frontmatter.customField.values)}
-          data-item-custom1-value={this.state.selected}>
+          data-item-custom1-value={this.state.selected}
+          data-item-custom2-name={item.frontmatter.customField2 ? item.frontmatter.customField2.name : null}
+          data-item-custom2-options={this.createString(item.frontmatter.customField2.values)}
+          data-item-custom2-value={this.state.selectedDate}
+          >
           Add to basket
         </BuyButton>
 
@@ -148,6 +165,12 @@ export const pageQuery = graphql`
             priceChange
           }   
         }
+        customField2 {
+          name
+          values {
+            name
+          }   
+        }        
       }
     }
   }
