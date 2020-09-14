@@ -13,4 +13,4 @@ customField2:
     values: [ {name: 'Thursday'}, {name: 'Friday'}]    
 ---
 
-A mix of high quality locally sourced fruit and vegetables box delivered to your door.
+A mix of high quality fruit and vegetables box delivered to your door.

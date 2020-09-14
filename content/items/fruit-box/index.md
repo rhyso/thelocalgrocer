@@ -4,7 +4,7 @@ date: 2019-06-19
 id: 5
 price: 15
 image: ./fruit-box.jpg
-description: A mix of high quality locally sourced fruit delivered to your door.
+description: A mix of high quality fruit delivered to your door.
 customField: 
     name: Box Size
     values: [{name: 'Small', priceChange: 0}, {name: 'Medium', priceChange: 5}, {name: 'Large', priceChange: 15.00}]
@@ -13,4 +13,4 @@ customField2:
     values: [ {name: 'Thursday'}, {name: 'Friday'}]
 ---
 
-A mix of high quality locally sourced fruit delivered to your door.
+A mix of high quality fruit delivered to your door.
