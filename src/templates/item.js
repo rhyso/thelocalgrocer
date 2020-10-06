@@ -55,7 +55,7 @@ const BuyButton = styled.button`
 class Item extends React.Component {
   state = {
     selected: this.props.data.markdownRemark.frontmatter.customField.values[0].name,
-    selectedDate: this.props.data.markdownRemark.frontmatter.customField2.values[0].name,
+    //selectedDate: this.props.data.markdownRemark.frontmatter.customField2.values[0].name,
   }
 
   setSelected = (value) => {
@@ -100,13 +100,7 @@ class Item extends React.Component {
           value={this.state.selected}>
           {item.frontmatter.customField.values.map((option) => (<DropdownOption key={option.name}>{option.name}</DropdownOption>))}
         </Dropdown>
-        Delivery Date:
-        <Dropdown
-          id={item.frontmatter.customField2.name}
-          onChange={(e) => this.setSelectedDate(e.target.value)}
-          value={this.state.selectedDate}>
-          {item.frontmatter.customField2.values.map((option) => (<DropdownOption key={option.name}>{option.name}</DropdownOption>))}
-        </Dropdown>
+  
 
         <BuyButton
           className='snipcart-add-item'
@@ -120,8 +114,6 @@ class Item extends React.Component {
           data-item-custom1-options={this.createString(item.frontmatter.customField.values)}
           data-item-custom1-value={this.state.selected}
           data-item-custom2-name={item.frontmatter.customField2 ? item.frontmatter.customField2.name : null}
-          data-item-custom2-options={this.createString(item.frontmatter.customField2.values)}
-          data-item-custom2-value={this.state.selectedDate}
           >
           Add to basket
         </BuyButton>
@@ -165,12 +157,7 @@ export const pageQuery = graphql`
             priceChange
           }   
         }
-        customField2 {
-          name
-          values {
-            name
-          }   
-        }        
+         
       }
     }
   }

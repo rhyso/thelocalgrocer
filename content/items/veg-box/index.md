@@ -8,9 +8,9 @@ description: A mix of high quality vegetables delivered to your door.
 customField: 
     name: Box Size
     values: [{name: 'Small', priceChange: 0}, {name: 'Medium', priceChange: 5}, {name: 'Large', priceChange: 15.00}]
-customField2: 
-    name: Delivery day
-    values: [{name: 'Thursday'}, {name: 'Friday'}]    
+# customField2: 
+#     name: Delivery day
+#     values: [{name: 'Thursday'}, {name: 'Friday'}]    
 ---
 
 A mix of high quality vegetables delivered to your door.
